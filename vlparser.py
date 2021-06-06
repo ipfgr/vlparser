@@ -41,8 +41,10 @@ def getResults(num):
             idx = ("000" +str(i))
         elif i <= num:
             idx = ("00" +str(i))
-        else:
-            file.write(obj)
+        
+        if i == num+1:
+            file.writelines(obj)
+            
         print("Get results for lottery number " + idx)
         writeToFileResult(idx)
 
